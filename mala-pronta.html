@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mala Pronta</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: 'Trebuchet MS', Verdana, sans-serif;
+    background: #eaf6f6; color: #12403f; padding: 40px 16px;
+  }
+  header { text-align: center; margin-bottom: 40px; }
+  header h1 { font-size: 2.3rem; margin: 0; color: #0e7c7b; }
+  header p { color: #3f8f8e; margin-top: 8px; }
+  main { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+  .post {
+    background: #ffffff; border: 1px solid #bfe6e5; border-radius: 16px;
+    padding: 24px; box-shadow: 0 6px 16px rgba(14, 124, 123, 0.1);
+  }
+  .post h2 { margin-top: 0; color: #0e7c7b; }
+  .post p { line-height: 1.6; color: #1f5352; }
+  .tag {
+    display: inline-block; background: #ff9f5a; color: #fff;
+    font-size: 0.75rem; font-weight: bold; padding: 4px 10px;
+    border-radius: 999px; margin-bottom: 12px;
+  }
+  .reacoes { display: flex; gap: 12px; margin-top: 16px; }
+  button {
+    display: flex; align-items: center; gap: 8px;
+    background: #d6f2f1; color: #12403f; border: 1px solid #a6dedd;
+    border-radius: 10px; padding: 8px 14px; font-size: 1rem; cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  button:hover { background: #bfe6e5; transform: translateY(-2px); }
+  button:active { transform: scale(0.95); }
+  button span { font-weight: bold; color: #0e7c7b; }
+  footer { text-align: center; margin-top: 48px; color: #3f8f8e; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>🧳 Mala Pronta</h1>
+    <p>Roteiros, dicas e destinos para o próximo embarque</p>
+  </header>
+  <main>
+    <article class="post">
+      <span class="tag">BRASIL</span>
+      <h2>3 dias em Bonito: onde a água é mais clara que o ar</h2>
+      <p>Flutuação no Rio da Prata, gruta com lago azul turquesa e trilhas em meio à Mata Atlântica. Um roteiro para quem quer natureza de verdade.</p>
+      <div class="reacoes">
+        <button>✈️<span>0</span></button>
+        <button>😍<span>0</span></button>
+        <button>📍<span>0</span></button>
+      </div>
+    </article>
+    <article class="post">
+      <span class="tag">DICA</span>
+      <h2>Como montar uma mala de 10kg para qualquer viagem</h2>
+      <p>Peças que combinam entre si, kit de higiene compacto e a regra de nunca levar "e se" na bagagem.</p>
+      <div class="reacoes">
+        <button>✈️<span>0</span></button>
+        <button>😍<span>0</span></button>
+        <button>📍<span>0</span></button>
+      </div>
+    </article>
+    <article class="post">
+      <span class="tag">INTERNACIONAL</span>
+      <h2>Lisboa fora do óbvio: 5 lugares que não estão nos guias</h2>
+      <p>Miradouros escondidos, tascas de bairro e uma livraria que parece um cenário de filme.</p>
+      <div class="reacoes">
+        <button>✈️<span>0</span></button>
+        <button>😍<span>0</span></button>
+        <button>📍<span>0</span></button>
+      </div>
+    </article>
+  </main>
+  <footer>Feito para quem já está pensando na próxima viagem.</footer>
+<script>
+  const botoes = document.querySelectorAll("button");
+  botoes.forEach(function (botao) {
+    botao.addEventListener("click", botaoClicado);
+    function botaoClicado() {
+      let contador = botao.querySelector("span");
+      contador.textContent++;
+    }
+  });
+</script>
+</body>
+</html>
